@@ -1,5 +1,5 @@
 SRC=jdcloud-gendoc.php
-#DOC=$(SRC:.php=.html)
+DOC=$(SRC:.php=.html)
 
 all: README.md $(DOC)
 
@@ -15,5 +15,5 @@ README.md: $(SRC) tool/gen-readme.pl
 	perl tool/gen-readme.pl $< > $@
 
 $(DOC): $(SRC)
-	jdcloud-gendoc.sh $^ -title "jdcloud-gendoc reference" > $@
+	php jdcloud-gendoc.php $^ > $@
 
