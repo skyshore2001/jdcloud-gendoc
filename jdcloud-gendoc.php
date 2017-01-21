@@ -82,7 +82,7 @@ class MyParsedown extends Parsedown
 
 		// 第一个module作为默认标题
 		if ($class == 'module' && !isset($autoTitle)) {
-			$autoTitle = $other ?: $key;
+			$autoTitle = $key . $other;
 		}
 		if ($newBlock) {
 			global $titleStack;
