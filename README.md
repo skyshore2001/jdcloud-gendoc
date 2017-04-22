@@ -13,3 +13,8 @@
 	php jdcloud-gendoc.php mysrc.js -title "API-Reference" > doc.html
 
 文档于utf-8编码，引用css文件style.css。该文件可自行配置。
+
+注意:
+
+- php.ini应加载mbstring模块.
+- 可直接使用生成的软件包jdcloud-gendoc.phar.
