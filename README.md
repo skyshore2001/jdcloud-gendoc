@@ -12,7 +12,13 @@
 
 	php jdcloud-gendoc.php mysrc.js -title "API-Reference" > doc.html
 
-文档于utf-8编码，引用css文件style.css。该文件可自行配置。
+文档使用utf-8编码。输出模板默认为refdoc-template.php，如果要指定模板，可以用`-template`参数。
+
+	php jdcloud-gendoc.php mysrc.js -title "API-Reference" -template refdoc-template-jdcloud.php > doc.html
+
+默认会引用css文件style.css，如果要自行指定额外js/css文件，可以用-linkFiles参数，多个文件用逗号分隔，如
+
+	php jdcloud-gendoc.php mysrc.js -title "API-Reference" -linkFiles "doc.js,doc.css" > doc.html
 
 注意:
 

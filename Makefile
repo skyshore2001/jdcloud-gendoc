@@ -3,7 +3,7 @@ OUT=$(SRC:.php=.phar)
 DOC=$(SRC:.php=.html)
 
 STUB=stub.php
-DEP=lib/common.php lib/Parsedown.php
+DEP=lib/common.php lib/Parsedown.php refdoc-template.php
 
 all: README.md $(DOC) $(OUT)
 
